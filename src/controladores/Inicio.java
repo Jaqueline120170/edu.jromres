@@ -3,8 +3,18 @@ package controladores;
 import java.util.Scanner;
 import servicios.MenuImplementacion;
 import servicios.MenuInterfaz;
+/**
+ *  Clase principal de la aplicación
+ * @author JRT 1/2/2024
+ */
 
 public class Inicio {
+	/**
+	 * Método de entrada a la aplicación
+	 * @author JRT - 1-2/204
+	 * @param args
+	 */
+	
 
 	
 	public static void main(String[] args) {

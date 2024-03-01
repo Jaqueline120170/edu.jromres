@@ -9,7 +9,10 @@ import dtos.VentasDto;
 
 import dtos.PedidosDto;
 
-
+/**
+ * Clase con la implementación de cada método para la operativa de calculos en función de la opcion que seleccione el usuario
+ * @author JRT 2/3/2024
+ */
 public class EmpleadoImplementacion implements EmpleadoInterfaz {
 
 	
