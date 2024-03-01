@@ -68,7 +68,7 @@ public void calculoVentasDiarias  (List<VentasDto>listaVentas) {
 public void crearPedido(List<PedidosDto>listaPedidos) {
 	
 	System.out.println("REALIZAR PEDIDO");
-	
+	long id=idCalculo(listaPedidos);
 	System.out.println("Introduzca el nombre del producto ");
 	String nombre = sc.next();
 	System.out.println("Introduzca la cantidad");
@@ -77,14 +77,31 @@ public void crearPedido(List<PedidosDto>listaPedidos) {
 	String fecha = sc.next();
 	DateTimeFormatter format = DateTimeFormatter.ofPattern(fecha);
 	LocalDateTime parsed = LocalDateTime.parse(fecha, format);
-	System.out.println("¿Desea introducir otro pedido? responda s/n");
-	if(sc.next().charAt(0) == 's') {
+	String fechaFin = fechaFin.formatted(format);
+	PedidosDto pedido= new PedidosDto(id,nombre,cantidad,fechaFin);
+	listaPedidos.add(pedido);
+private long idCalculo(List<PedidosDto>listaPedidos) {
+		
+		long idCalculado;
+        int tamanioLista = listaPedidos.size();
+        if (tamanioLista == 0)
+        {
+            idCalculado = 1;
+        }
+        else
+        {
+            idCalculado = listaPedidos.get(tamanioLista-1).getIdProducto();
+        }
+
+        return idCalculado;
+	}
 		
 			
 }
-public void introducirPedido(List<PedidosDto>listaPedidos) {
-	
+		
+			
 }
 
+
 }
-}
+
