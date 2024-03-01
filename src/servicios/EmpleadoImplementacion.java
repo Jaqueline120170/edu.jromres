@@ -75,7 +75,8 @@ public class EmpleadoImplementacion implements EmpleadoInterfaz {
 		String fecha = sc.next();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern(fecha);
 		LocalDateTime parsed = LocalDateTime.parse(fecha, format);
-		PedidosDto pedido= new PedidosDto(id,nombre,cantidad,fecha);
+		String fechaFin = fechaFin.formatted(format);
+		PedidosDto pedido= new PedidosDto(id,nombre,cantidad,fechaFin);
 		listaPedidos.add(pedido);
 		System.out.println("¿Desea introducir otro pedido? responda s/n");
 		if(sc.next().charAt(0) == 's') {
