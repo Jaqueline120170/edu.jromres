@@ -54,11 +54,12 @@ public class EmpleadoImplementacion implements EmpleadoInterfaz {
 		String fechaVenta=sc.next();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern(fechaVenta);
 		LocalDateTime parsed = LocalDateTime.parse(fechaVenta, format);
-		Period p = Period.between(parsed,venta.getFecha());
+
+		int minutos = parsed.getMinute();
 	
 		
 		
-		System.out.println("El calculo de ventas diarias es de :  "+  venta.getImporteVenta() + p );
+		System.out.println("El calculo de ventas diarias es de :  "+  venta.getImporteVenta() + minutos );
 	}
 	
 	
