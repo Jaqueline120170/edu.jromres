@@ -66,7 +66,7 @@ public class EmpleadoImplementacion implements EmpleadoInterfaz {
 	public void crearPedido(List<PedidosDto>listaPedidos) {
 		
 		System.out.println("REALIZAR PEDIDO");
-		
+		long id=idCalculo(listaPedidos);
 		System.out.println("Introduzca el nombre del producto ");
 		String nombre = sc.next();
 		System.out.println("Introduzca la cantidad");
@@ -75,13 +75,28 @@ public class EmpleadoImplementacion implements EmpleadoInterfaz {
 		String fecha = sc.next();
 		DateTimeFormatter format = DateTimeFormatter.ofPattern(fecha);
 		LocalDateTime parsed = LocalDateTime.parse(fecha, format);
+		PedidosDto pedido= new PedidosDto(id,nombre,cantidad,fecha);
+		listaPedidos.add(pedido);
 		System.out.println("¿Desea introducir otro pedido? responda s/n");
 		if(sc.next().charAt(0) == 's') {
 			
 				
 	}
-	public void introducirPedido(List<PedidosDto>listaPedidos) {
+	}
+	private long idCalculo(List<PedidosDto>listaPedidos) {
 		
+		long idCalculado;
+        int tamanioLista = listaPedidos.size();
+        if (tamanioLista == 0)
+        {
+            idCalculado = 1;
+        }
+        else
+        {
+            idCalculado = listaPedidos.get(tamanioLista-1).getIdProducto();
+        }
+
+        return idCalculado;
 	}
 
 }
