@@ -14,6 +14,7 @@ public class MenuImplementacion implements MenuInterfaz {
 	List<PedidosDto>listaPedidos= new ArrayList<PedidosDto>();
 	List <VentasDto> listaVentas = new ArrayList <VentasDto>();
 	EmpleadoInterfaz ei = new EmpleadoImplementacion();
+	GerenteInterfaz gi = new GerenteImplementacion();
 	Scanner sc = new Scanner(System.in);
 		
 		public int mostrarMenuYSeleccion() {
@@ -72,6 +73,7 @@ public class MenuImplementacion implements MenuInterfaz {
 			 case 0:
 				 break;
 			 case 1 :
+				 gi.aniadirVenta(listaVentas);
 				 break;
 			 case 2 :
 				 ei.calculoVentasDiarias(listaVentas);
