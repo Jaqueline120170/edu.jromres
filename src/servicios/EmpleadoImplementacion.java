@@ -99,7 +99,31 @@ public class EmpleadoImplementacion implements EmpleadoInterfaz {
 
         return idCalculado;
 	}
+	public void mostrarVentas(List<VentasDto> listaVentas ) {
+		if (listaVentas.size() > 0) {
 
+			System.out.println("Ingresa la fecha formato(dd-MM-yyyy)");
+			String fechaAux = sc.nextLine();
+			for (VentasDto venta : listaVentas) {
+
+				if (venta.getFecha().equals(fechaAux)) {
+
+					String fecha = fechaAux;
+
+					DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm:ss");
+
+					fecha = fecha.format(fechaAux, formato);
+
+					System.out.println("venta: " + venta.getNombreProducto());
+					System.out.println("Euros: " + venta.getImporteVenta());
+					System.out.println("Instante de compra: " + fecha);
+
+				}
+
+			}
+		}
+
+	}
 }
 }
 

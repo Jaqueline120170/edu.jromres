@@ -26,5 +26,5 @@ public interface EmpleadoInterfaz {
 	 */
 	public void crearPedido(List<PedidosDto>listaPedidos);
 	
-
+	public void mostrarVentas(List<VentasDto> listaVentas );
 }

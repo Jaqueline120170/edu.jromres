@@ -43,6 +43,7 @@ public class MenuImplementacion implements MenuInterfaz {
 				 ei.calculoVentasDiarias(listaVentas);
 				 break;
 			 case 3:
+				 ei.mostrarVentas(listaVentas);
 				 break;
 			 case 4:
 				 ei.crearPedido(listaPedidos);
@@ -79,6 +80,7 @@ public class MenuImplementacion implements MenuInterfaz {
 				 ei.calculoVentasDiarias(listaVentas);
 				 break;
 			 case 3:
+				 ei.mostrarVentas(listaVentas);
 				 break;
 			 case 4:
 				 ei.crearPedido(listaPedidos);

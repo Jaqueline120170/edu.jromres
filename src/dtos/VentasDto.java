@@ -12,6 +12,7 @@ public class VentasDto {
 	 */
 
 	long idVenta;
+	String nombreProducto;
 	LocalDateTime  fecha = LocalDateTime.now();
 	int importeVenta;
 	
@@ -31,6 +32,46 @@ public class VentasDto {
 		this.fecha = fecha;
 		this.importeVenta = importeVenta;
 	}
+
+
+	public long getIdVenta() {
+		return idVenta;
+	}
+
+
+	public void setIdVenta(long idVenta) {
+		this.idVenta = idVenta;
+	}
+
+
+	public String getNombreProducto() {
+		return nombreProducto;
+	}
+
+
+	public void setNombreProducto(String nombreProducto) {
+		this.nombreProducto = nombreProducto;
+	}
+
+
+	public LocalDateTime getFecha() {
+		return fecha;
+	}
+
+
+	public void setFecha(LocalDateTime fecha) {
+		this.fecha = fecha;
+	}
+
+
+	public int getImporteVenta() {
+		return importeVenta;
+	}
+
+
+	public void setImporteVenta(int importeVenta) {
+		this.importeVenta = importeVenta;
+	}
 	
 	/**
 	 * mètodos get y set los cuales formarán una estructura con caracteristicas que identifiquen de forma 
@@ -38,24 +79,7 @@ public class VentasDto {
     * @author JRT - 2/3/2024
 	 * @return
 	 */
-	public long getIdVenta() {
-		return idVenta;
-	}
-	public void setIdVenta(long idVenta) {
-		this.idVenta = idVenta;
-	}
-	public LocalDateTime getFecha() {
-		return fecha;
-	}
-	public void setFecha(LocalDateTime fecha) {
-		this.fecha = fecha;
-	}
-	public int getImporteVenta() {
-		return importeVenta;
-	}
-	public void setImporteVenta(int importeVenta) {
-		this.importeVenta = importeVenta;
-	}
+	
 	
 	
 	
